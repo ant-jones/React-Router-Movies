@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+ 
 const Movie = (props) => {
   const [movie, setMovie] = useState({});
- 
+  
+
   useEffect(() => {
     const id = 1;
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
-
+    const show = movie.find(flix => flix.id === Number(props.match.prams.id))
+  console.log(show)
        axios
         .get(`http://localhost:5000/api/movies/${id}`)
         .then(response => {
