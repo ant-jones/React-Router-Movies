@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link} from "react-router-dom";
-import movie from "./Movie"
+import { Link } from "react-router-dom";
+//import movie from "./Movie"
 
 const MovieList = props => {
   const [movies, setMovies] = useState([])
@@ -26,10 +26,10 @@ const MovieList = props => {
       {movies.map(movie => (
         <div>
           <MovieDetails key={movie.id} movie={movie} />
-                
-        <Link to={`/movies/${movie.id}`}>
-          <p>{movie.title}</p>
-        </Link>
+          <Link to={`/movies/${movie.id}`}>
+          {movie.title}
+          </Link>
+         
         </div>  
       ))}
      

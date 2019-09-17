@@ -18,8 +18,8 @@ const App = () => {
       <div> 
         
         <Route path="/" component={MovieList} />
-        <Route path="/Movie" component={Movie} />
-        <Route path="/movie-list/:movieid" component={Movie} />
+        
+        <Route path={`/movie-list/${Movie.id}`} component={Movie} />
       </div>
     </div>
   );
