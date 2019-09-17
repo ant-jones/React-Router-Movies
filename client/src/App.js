@@ -16,9 +16,10 @@ const App = () => {
      
       <SavedList list={savedList} />
       <div> 
+        
         <Route path="/" component={MovieList} />
         <Route path="/Movie" component={Movie} />
-        <Route path="/movie-list/:id" component={Movie} />
+        <Route path="/movie-list/:movieid" component={Movie} />
       </div>
     </div>
   );
