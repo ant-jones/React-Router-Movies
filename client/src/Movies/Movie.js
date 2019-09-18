@@ -7,7 +7,8 @@ const Movie = (props) => {
   
   useEffect(() => {
     
-    const id = movie.find(flix => flix.id === Number(props.match.params.id));
+   // const id = movie.find(flix => flix.id === Number(props.match.params.id));
+   const id = props.match.params.id;
     console.log(id)
     
     // change ^^^ that line and grab the id from the URL
@@ -24,7 +25,8 @@ const Movie = (props) => {
           console.error(error);
         });
 
-  },[]);
+
+  },[props.match.params.id]);
   
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = () => {
