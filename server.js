@@ -65,7 +65,7 @@ app.post('/api/movies', (req, res) => {
 	if (req.body.id !== undefined) movies.push(req.body);
 	res.status(201).json(movies);
 });
-const PORT=5250
-app.listen(PORT, () => {
-	console.log('Server listening on port'+ PORT);
+
+app.listen(5000, () => {
+	console.log('Server listening on port 5000');
 });
